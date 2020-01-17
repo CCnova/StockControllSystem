@@ -59,5 +59,42 @@ namespace SouzaADM.Models
 
             return totalPrice;
         }
+
+        public bool CheckIfExists(string prodName)
+        {
+            foreach(StockItem item in Itens)
+            {
+                if(item.Product.Name == prodName)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public StockItem GetStockItemByName(string itemName)
+        {
+            foreach(StockItem item in Itens)
+            {
+                if(item.Product.Name == itemName)
+                {
+                    return item;
+                }
+            }
+
+            return null;
+        }
+
+        public void IncreaseQuantity(string prodName, int qnt)
+        {
+            foreach(StockItem item in Itens)
+            {
+                if(item.Product.Name == prodName)
+                {
+                    item.Quantity += qnt;
+                }
+            }
+        }
     }
 }

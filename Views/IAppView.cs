@@ -7,7 +7,7 @@ namespace SouzaADM.Views
 {
     public interface IAppView
     {
-        public char GetCommand();
+        public string GetCommand();
         public void ListStock(Stock s);
         public string GetProductName();
         public char GetProductType();

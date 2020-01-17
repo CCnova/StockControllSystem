@@ -7,10 +7,15 @@ namespace SouzaADM.Views
 {
     public class AppView : IAppView
     {
-        public char GetCommand()
+        public string GetCommand()
         {
-            Console.WriteLine("\nAdicionar item(A), Remover Item(R), Adicionar Receita(AR), Remover Receita(RR), Listar Estoque de Itens(L), Listar Receitas(LR), Sair(S):");
-            char command = Console.ReadKey().KeyChar;
+            string command = " ";
+            
+            while(command != "A" && command != "R" && command != "AR" && command != "RR" && command != "L" && command != "LR" && command != "S")
+            {
+                Console.WriteLine("\nAdicionar item(A), Remover Item(R), Adicionar Receita(AR), Remover Receita(RR), Listar Estoque de Itens(L), Listar Receitas(LR), Sair(S):");
+                command = Console.ReadLine().ToUpper();
+            }
 
             return command;
         }
@@ -18,7 +23,7 @@ namespace SouzaADM.Views
         public string GetProductName()
         {
             Console.WriteLine("\nEscreva o nome do novo produto: ");
-            string newProdName = Console.ReadLine();
+            string newProdName = Console.ReadLine().ToUpper();
 
             return newProdName;
         }
@@ -26,7 +31,7 @@ namespace SouzaADM.Views
         public char GetProductType()
         {
             Console.WriteLine("\nDigite o tipo do produto: E(Equipamento), C(Comida)");
-            char prodType = Console.ReadKey().KeyChar;
+            char prodType = char.ToUpper(Console.ReadKey().KeyChar);
 
             return prodType;
         }

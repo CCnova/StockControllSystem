@@ -24,30 +24,38 @@ namespace SouzaADM.Controllers
 
         public void GetUserInput()
         {
-            char command = AppView.GetCommand();
+            string command = AppView.GetCommand();
 
-            if(command == 'A')
+            if(command == "A")
             {
                 string newProdName = AppView.GetProductName();
-                char newProdType = AppView.GetProductType();
-                double newProdPrice = AppView.GetProductPrice();
-                int newProdQuantity = AppView.GetProductQuantity();
-
-                if(newProdType == 'E')
+                int newProdQuantity = 0;
+                if(Stock.CheckIfExists(newProdName))
                 {
-                    EquipProduct newProd = new EquipProduct(newProdName, newProdPrice);
-                    Stock.AddItem(newProd, newProdQuantity);
-                }
-
-                else
+                    newProdQuantity = AppView.GetProductQuantity();
+                    Stock.IncreaseQuantity(newProdName, newProdQuantity);
+                } else
                 {
-                    FoodProduct newProd = new FoodProduct(newProdName, newProdPrice);
-                    Stock.AddItem(newProd, newProdQuantity);
-                }
-            } else if(command == 'L')
+                    char newProdType = AppView.GetProductType();
+                    double newProdPrice = AppView.GetProductPrice();
+                    newProdQuantity = AppView.GetProductQuantity();
+
+                    if (newProdType == 'E')
+                    {
+                        EquipProduct newProd = new EquipProduct(newProdName, newProdPrice);
+                        Stock.AddItem(newProd, newProdQuantity);
+                    }
+
+                    else
+                    {
+                        FoodProduct newProd = new FoodProduct(newProdName, newProdPrice);
+                        Stock.AddItem(newProd, newProdQuantity);
+                    }
+                }   
+            } else if(command == "L")
             {
                 AppView.ListStock(Stock);
-            } else if(command == 'S')
+            } else if(command == "S")
             {
                 System.Environment.Exit(1);
             }
