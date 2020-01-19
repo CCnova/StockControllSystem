@@ -1,4 +1,6 @@
 ﻿using SouzaADM.Controllers;
+using SouzaADM.Views;
+using SouzaADM.Models;
 using System;
 
 namespace SouzaADM
@@ -9,7 +11,7 @@ namespace SouzaADM
 
         static void Main(string[] args)
         {
-            _appController = new AppController();
+            _appController = new AppController(new AppView(), new UpdateStockItemView(), new Stock());
             
         }
     }

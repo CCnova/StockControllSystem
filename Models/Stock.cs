@@ -7,11 +7,11 @@ namespace SouzaADM.Models
     public class Stock
     {
         public List<StockItem> Itens { get; set; }
-        public List<RecipeItem> Recipes { get; set; } 
+        public List<Recipe> Recipes { get; set; } 
         public Stock()
         {
             Itens = new List<StockItem>();
-            Recipes = new List<RecipeItem>();
+            Recipes = new List<Recipe>();
         }
 
         public bool AddItem(Product prod)
@@ -60,11 +60,24 @@ namespace SouzaADM.Models
             return totalPrice;
         }
 
-        public bool CheckIfExists(string prodName)
+        public bool CheckIfProductExists(string prodName)
         {
             foreach(StockItem item in Itens)
             {
                 if(item.Product.Name == prodName)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool CheckIfRecipeExists(string recipeName)
+        {
+            foreach(Recipe rec in Recipes)
+            {
+                if(rec.Name == recipeName)
                 {
                     return true;
                 }
@@ -93,6 +106,34 @@ namespace SouzaADM.Models
                 if(item.Product.Name == prodName)
                 {
                     item.Quantity += qnt;
+                }
+            }
+        }
+
+        public void DecreaseQuantity(string prodName, int qnt)
+        {
+            foreach(StockItem item in Itens)
+            {
+                if(item.Product.Name == prodName)
+                {
+                    if(item.Quantity < qnt)
+                    {
+                        item.Quantity = 0;
+                        return;
+                    }
+
+                    item.Quantity -= qnt;
+                }
+            }
+        }
+
+        public void DelProdByName(string prodName)
+        {
+            for(int i = 0; i < Itens.Count; i++)
+            {
+                if(Itens[i].Product.Name == prodName)
+                {
+                    Itens.RemoveAt(i);
                 }
             }
         }
