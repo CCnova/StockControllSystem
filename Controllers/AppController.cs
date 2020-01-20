@@ -109,7 +109,29 @@ namespace SouzaADM.Controllers
                     return;
                 } else
                 {
-                    List<RecipeIngredient> newRecipeIngredients = AppView.GetRecipeIngredients();
+                    List<RecipeIngredient> ingredients = new List<RecipeIngredient>();
+                    string newIngredientName = " ";
+                    while(true)
+                    {
+                        newIngredientName = AppView.GetIngredientName();
+                        if(newIngredientName == "SAIR") { break; }
+
+                        StockItem auxItem = Stock.GetStockItemByName(newIngredientName);
+
+                        string newIngredientQuantity = AppView.GetIngredientQuantity();
+
+                        ingredients.Add(new RecipeIngredient(auxItem.Product, newIngredientQuantity));
+                    }
+
+                    string newRecipeLongDescription = AppView.GetRecipeLongDescription();
+
+                    string newRecipeShortDescription = AppView.GetRecipeShortDescription();
+
+                    Recipe newRecipe = new Recipe(newRecipeName, ingredients, newRecipeLongDescription, newRecipeShortDescription);
+
+                    Stock.AddRecipe(newRecipe);
+
+                    Console.WriteLine("Receita adicionada ao estoque!");
                 }
             }
         }

@@ -10,7 +10,7 @@ namespace SouzaADM.Models
         public List<RecipeIngredient> Ingredients { get; set; }
         public string LongDescription { get; set; }
         public string ShortDescription { get; set; }
-        public double TotalPrice { get; set; }
+
 
         public Recipe(string name, List<RecipeIngredient> ingredients, string longDescription, string shortDescription)
         {
@@ -18,12 +18,6 @@ namespace SouzaADM.Models
             Ingredients = ingredients;
             LongDescription = longDescription;
             ShortDescription = shortDescription;
-            TotalPrice = 0;
-
-            foreach(RecipeIngredient r in ingredients)
-            {
-                TotalPrice += r.Ingredient.Price * r.Quantity;
-            }
         }
     }
 }

@@ -16,6 +16,9 @@ namespace SouzaADM.Views
         public char GetProductType();
         public double GetProductPrice();
         public int GetProductQuantity();
-        public List<RecipeIngredient> GetRecipeIngredients();
+        public string GetIngredientName();
+        public string GetIngredientQuantity();
+        public string GetRecipeLongDescription();
+        public string GetRecipeShortDescription();
     }
 }

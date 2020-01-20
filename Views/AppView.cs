@@ -90,15 +90,42 @@ namespace SouzaADM.Views
                     recipeDescription += ". " + recIngr.Ingredient.Name + "   Quantidade: " + recIngr.Quantity + "\n";
                 }
 
-                recipeDescription += "\nPreco Total: " + recipe.TotalPrice;
 
                 Console.WriteLine(recipeDescription);
             }
         }
 
-        public List<RecipeIngredient> GetRecipeIngredients()
+        public string GetIngredientName()
         {
-            // TO DO : Terminar implantacao
+            Console.WriteLine("\nDigite o nome do ingrediente ou 'sair' para finalizar:");
+
+            string ingredientName = Console.ReadLine().ToUpper();
+
+            return ingredientName;
+        }
+
+        public string GetIngredientQuantity()
+        {
+            Console.WriteLine("\nDigite a quantidade do ingrediente: ");
+            string ingredientQuantity = Console.ReadLine().ToUpper();
+
+            return ingredientQuantity;
+        }
+
+        public string GetRecipeLongDescription()
+        {
+            Console.WriteLine("\nDigite uma descricao detalhada da receita:");
+            string description = Console.ReadLine();
+
+            return description;
+        }
+
+        public string GetRecipeShortDescription()
+        {
+            Console.WriteLine("Digite uma descricao abreviada da receita:");
+            string description = Console.ReadLine();
+
+            return description;
         }
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/cnova/MEGA/Lazulli/SouzaAlimentos/Sistema/SouzaADM/SouzaADM/SouzaADM.csproj",
+      "projectUniqueName": "/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/SouzaADM.csproj",
       "projectName": "SouzaADM",
-      "projectPath": "/home/cnova/MEGA/Lazulli/SouzaAlimentos/Sistema/SouzaADM/SouzaADM/SouzaADM.csproj",
+      "projectPath": "/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/SouzaADM.csproj",
       "packagesPath": "/home/cnova/.nuget/packages/",
-      "outputPath": "/home/cnova/MEGA/Lazulli/SouzaAlimentos/Sistema/SouzaADM/SouzaADM/obj/",
+      "outputPath": "/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/cnova/.nuget/NuGet/NuGet.Config"

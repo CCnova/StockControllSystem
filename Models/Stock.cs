@@ -14,6 +14,11 @@ namespace SouzaADM.Models
             Recipes = new List<Recipe>();
         }
 
+        public void AddRecipe(Recipe rec)
+        {
+            this.Recipes.Add(rec);
+        }
+
         public bool AddItem(Product prod)
         {
             foreach(StockItem s in Itens)

@@ -20,3 +20,14 @@ C:/Users/CNova/Documents/MEGA/Lazulli/SouzaAlimentos/Sistema/SouzaADM/SouzaADM/o
 /home/cnova/MEGA/Lazulli/SouzaAlimentos/Sistema/SouzaADM/SouzaADM/obj/Debug/netcoreapp3.0/SouzaADM.AssemblyInfo.cs
 /home/cnova/MEGA/Lazulli/SouzaAlimentos/Sistema/SouzaADM/SouzaADM/obj/Debug/netcoreapp3.0/SouzaADM.dll
 /home/cnova/MEGA/Lazulli/SouzaAlimentos/Sistema/SouzaADM/SouzaADM/obj/Debug/netcoreapp3.0/SouzaADM.pdb
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/obj/Debug/netcoreapp3.0/SouzaADM.csprojAssemblyReference.cache
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/obj/Debug/netcoreapp3.0/SouzaADM.AssemblyInfoInputs.cache
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/obj/Debug/netcoreapp3.0/SouzaADM.AssemblyInfo.cs
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/obj/Debug/netcoreapp3.0/SouzaADM.dll
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/obj/Debug/netcoreapp3.0/SouzaADM.pdb
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/bin/Debug/netcoreapp3.0/SouzaADM
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/bin/Debug/netcoreapp3.0/SouzaADM.deps.json
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/bin/Debug/netcoreapp3.0/SouzaADM.runtimeconfig.json
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/bin/Debug/netcoreapp3.0/SouzaADM.runtimeconfig.dev.json
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/bin/Debug/netcoreapp3.0/SouzaADM.dll
+/home/cnova/Documents/Lazulli/SouzaAlimentos/Sistema/SouzaADM/StockControllSystem/bin/Debug/netcoreapp3.0/SouzaADM.pdb
